@@ -12,56 +12,56 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 7;
+    z-index: 8;
     filter: drop-shadow(-3px 3px 5px rgba(70, 70, 70, 0.384))
 }
 .tail {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 6;
+    z-index: 7;
     filter: drop-shadow(-3px 3px 5px rgba(70, 70, 70, 0.384))
 }
 .paw {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 5;
+    z-index: 6;
     filter: drop-shadow(-3px 3px 5px rgba(70, 70, 70, 0.384))
 }
 .horn {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 4;
+    z-index: 5;
     filter: drop-shadow(-3px 3px 5px rgba(70, 70, 70, 0.384))
 }
 .ear {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 3;
+    z-index: 4;
     filter: drop-shadow(-3px 3px 5px rgba(70, 70, 70, 0.384))
 }
 .hair{
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 3;
     filter: drop-shadow(-3px 3px 5px rgba(70, 70, 70, 0.384))
 }
 .eye {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 2;
     filter: drop-shadow(-3px 3px 5px rgba(70, 70, 70, 0.384))
 }
 .monster-body {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 0;
+    z-index: 1;
     filter: saturate(2878%) hue-rotate(90deg) drop-shadow(-3px 3px 5px rgba(70, 70, 70, 0.384));
 }
 .shadow {
