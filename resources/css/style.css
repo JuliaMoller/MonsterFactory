@@ -6,7 +6,7 @@
     left: 0;
     width: 500px;
     height: 500px;
-    background-color: #f6b73c;
+    background-color: #232933;
 }
 .mouth {
     position: absolute;
@@ -63,4 +63,11 @@
     left: 0;
     z-index: 0;
     filter: saturate(2878%) hue-rotate(90deg) drop-shadow(-3px 3px 5px rgba(70, 70, 70, 0.384));
+}
+.shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    filter: drop-shadow(-3px 3px 5px rgba(70, 70, 70, 0.384))
 }
