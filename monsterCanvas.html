@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Monster Factory</title>
+        <link href="/resources/css/style.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+
+    <body>
+        <!-- Monster Canvas -->
+        <div id="monsterCanvas" class="parent">
+            <object data="svg/monster/mouth1.svg" class="mouth" type="image/svg+xml"></object>
+            <object data="svg/monster/tail1.svg" class="tail" type="image/svg+xml"></object>
+            <object data="svg/monster/paws1.svg" class="paw" type="image/svg+xml"></object>
+            <object data="svg/monster/horn1.svg" class="horn" type="image/svg+xml"></object>
+            <object data="svg/monster/ears1.svg" class="ear" type="image/svg+xml"></object>
+            <object data="svg/monster/hair1.svg" class="hair" type="image/svg+xml"></object>
+            <object data="svg/monster/eyes1.svg" class="eye" type="image/svg+xml"></object>
+            <object data="svg/monster/body.svg" class="monster-body" type="image/svg+xml" id="monsterBody"></object>
+        </div>
+        
+        <input type="color" id="colorInputColor" value="#f6b73c">
+        <input type="button" id="colorButton" value="Change" onclick="changeCanvasColor()">
+        <input type="button" id="monsterPaws" value="Paws" onclick="changePaws()">
+        <button onclick="changeMonsterBody()">Body</button>
+
+        <script type="text/javascript" src="/resources/js/script.js"></script>
+    </body>
+</html>
