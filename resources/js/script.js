@@ -15,3 +15,14 @@ function changePaws () {
 function changeMonsterBody () {
      document.getElementById("monsterBody").style.filter = "saturate(100%) hue-rotate(5deg)";
 }
+
+// to change monster's mounth
+var mouths = [  
+    "resources/svg/monster/mouth1.svg", 
+    "resources/svg/monster/mouth2.svg", 
+    "resources/svg/monster/mouth3.svg"
+]
+function changeMouth() {
+    var m = document.getElementById("mouths").value;
+    document.getElementsByClassName("mouth")[0].setAttribute("data", mouths[m]);
+}
