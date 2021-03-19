@@ -12,77 +12,103 @@
     </head>
 
     <body>
-        <!-- Monster Canvas -->
-        <div id="monsterCanvas" class="parent">
-            <object data="resources/svg/monster/mouth1.svg" class="mouth" type="image/svg+xml"></object>
-            <object data="resources/svg/monster/tail1.svg" class="tail" type="image/svg+xml"></object>
-            <object data="resources/svg/monster/paws1.svg" class="paw" type="image/svg+xml"></object>
-            <object data="resources/svg/monster/horn1.svg" class="horn" type="image/svg+xml"></object>
-            <object data="resources/svg/monster/ears1.svg" class="ear" type="image/svg+xml"></object>
-            <object data="resources/svg/monster/hair1.svg" class="hair" type="image/svg+xml"></object>
-            <object data="resources/svg/monster/eyes1.svg" class="eye" type="image/svg+xml"></object>
-            <object data="resources/svg/monster/body.svg" class="monster-body" type="image/svg+xml" id="monsterBody"></object>
-            <object data="resources/svg/monster/shadow.svg" class="shadow" type="image/svg+xml"></object>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <!-- eyes select -->
+                    <label>Eye</label>
+                    <select id="eyes" onchange="changeSvg('eye', this.id)">
+                        <option value="0">1</option>
+                        <option value="1">2</option>
+                        <option value="2">3</option>
+                    </select>
+                    
+                    <!-- horns select -->
+                    <label>Horn</label>
+                    <select id="horns" onchange="changeSvg('horn', this.id)">
+                        <option value="0">1</option>
+                        <option value="1">2</option>
+                        <option value="2">3</option>
+                    </select>
+                    <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="hornsHueRotate" oninput="hueFunction('horn', this.value)">
+                    <!-- ears select -->
+                    <label>Ear</label>
+                    <select id="ears" onchange="changeSvg('ear', this.id)">
+                        <option value="0">1</option>
+                        <option value="1">2</option>
+                        <option value="2">3</option>
+                    </select>
+                    <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="earsHueRotate" oninput="hueFunction('ear', this.value)">
+                    <!-- hair select -->
+                    <label>Hair</label>
+                    <select id="hairs" onchange="changeSvg('hair', this.id)">
+                        <option value="0">1</option>
+                        <option value="1">2</option>
+                        <option value="2">3</option>
+                    </select>
+                    <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="hairssHueRotate" oninput="hueFunction('hair', this.value)">
+                    
+                </div>
+                <div class="col">
+                    <!-- Monster Canvas -->
+                    <div id="monsterCanvas" class="parent">
+                        <object data="resources/svg/monster/mouth1.svg" class="mouth" type="image/svg+xml"></object>
+                        <object data="resources/svg/monster/tail1.svg" class="tail" type="image/svg+xml"></object>
+                        <object data="resources/svg/monster/paws1.svg" class="paw" type="image/svg+xml"></object>
+                        <object data="resources/svg/monster/horn1.svg" class="horn" type="image/svg+xml"></object>
+                        <object data="resources/svg/monster/ears1.svg" class="ear" type="image/svg+xml"></object>
+                        <object data="resources/svg/monster/hair1.svg" class="hair" type="image/svg+xml"></object>
+                        <object data="resources/svg/monster/eyes1.svg" class="eye" type="image/svg+xml"></object>
+                        <object data="resources/svg/monster/body.svg" class="monster-body" type="image/svg+xml" id="monsterBody"></object>
+                        <object data="resources/svg/monster/shadow.svg" class="shadow" type="image/svg+xml"></object>
+                    </div>
+                    <!-- canvas background colour -->
+                    <input type="color" id="colorInputColor" value="#232933">
+                    <input class="btn" type="button" id="colorButton" value="Change" onclick="changeCanvasColor(this.value)">
+                </div>
+                <div class="col">
+                    <!-- mouths select -->
+                    <label>Mouth</label>
+                    <select id="mouths" onchange="changeSvg('mouth', this.id)">
+                        <option value="0">1</option>
+                        <option value="1">2</option>
+                        <option value="2">3</option>
+                    </select>
+                    <!-- tails select -->
+                    <label>Tail</label>
+                    <select id="tails" onchange="changeSvg('tail', this.id)">
+                        <option value="0">1</option>
+                        <option value="1">2</option>
+                        <option value="2">3</option>
+                    </select>
+                    <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="tailsHueRotate" oninput="hueFunction('tail', this.value)">
+                    <!-- paws select -->
+                    <label>Paw</label>
+                    <select id="paws" onchange="changeSvg('paw', this.id)">
+                        <option value="0">1</option>
+                        <option value="1">2</option>
+                        <option value="2">3</option>
+                    </select>
+                    <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="pawsHueRotate" oninput="hueFunction('paw', this.value)">
+                    <!-- body select -->
+                    <label>Body</label>
+                    <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="bodyHueRotate" oninput="hueFunction('monster-body', this.value)">
+                </div>
+            </div>
         </div>
+
         
-        <input type="color" id="colorInputColor" value="#232933">
-        <input type="button" id="colorButton" value="Change" onclick="changeCanvasColor(this.value)">
-        <!-- mouths select -->
-        <label>Mouth</label>
-        <select id="mouths" onchange="changeSvg('mouth', this.id)">
-            <option value="0">1</option>
-            <option value="1">2</option>
-            <option value="2">3</option>
-        </select>
-        <!-- paws select -->
-        <label>Paw</label>
-        <select id="paws" onchange="changeSvg('paw', this.id)">
-            <option value="0">1</option>
-            <option value="1">2</option>
-            <option value="2">3</option>
-        </select>
-        <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="pawsHueRotate" oninput="hueFunction('paw', this.value)">
+        
+       
+        
 
-        <label>Tail</label>
-        <select id="tails" onchange="changeSvg('tail', this.id)">
-            <option value="0">1</option>
-            <option value="1">2</option>
-            <option value="2">3</option>
-        </select>
-        <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="tailsHueRotate" oninput="hueFunction('tail', this.value)">
 
-        <label>Horn</label>
-        <select id="horns" onchange="changeSvg('horn', this.id)">
-            <option value="0">1</option>
-            <option value="1">2</option>
-            <option value="2">3</option>
-        </select>
-        <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="hornsHueRotate" oninput="hueFunction('horn', this.value)">
 
-        <label>Ear</label>
-        <select id="ears" onchange="changeSvg('ear', this.id)">
-            <option value="0">1</option>
-            <option value="1">2</option>
-            <option value="2">3</option>
-        </select>
-        <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="earsHueRotate" oninput="hueFunction('ear', this.value)">
 
-        <label>Hair</label>
-        <select id="hairs" onchange="changeSvg('hair', this.id)">
-            <option value="0">1</option>
-            <option value="1">2</option>
-            <option value="2">3</option>
-        </select>
-        <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="hairssHueRotate" oninput="hueFunction('hair', this.value)">
 
-        <label>Eye</label>
-        <select id="eyes" onchange="changeSvg('eye', this.id)">
-            <option value="0">1</option>
-            <option value="1">2</option>
-            <option value="2">3</option>
-        </select>
 
-        <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="bodyHueRotate" oninput="hueFunction('monster-body', this.value)">
+
+
 
         <!-- Bootstrap core JavaScript -->
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
