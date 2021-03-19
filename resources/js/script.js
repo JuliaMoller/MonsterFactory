@@ -75,3 +75,14 @@ function changeHairs () {
     let i = document.getElementById("hairs").value;
     document.getElementsByClassName("hair")[0].setAttribute("data", hairs[i]);
 }
+
+// to change monster's eyes
+var eyes = [  
+    "resources/svg/monster/eyes1.svg", 
+    "resources/svg/monster/eyes2.svg", 
+    "resources/svg/monster/eyes3.svg"
+]
+function changeEyes () {
+    let i = document.getElementById("eyes").value;
+    document.getElementsByClassName("eye")[0].setAttribute("data", eyes[i]);
+}
