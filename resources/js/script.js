@@ -53,3 +53,14 @@ function changeHorns () {
     let i = document.getElementById("horns").value;
     document.getElementsByClassName("horn")[0].setAttribute("data", horns[i]);
 }
+
+// to change monster's horns
+var ears = [  
+    "resources/svg/monster/ears1.svg", 
+    "resources/svg/monster/ears2.svg", 
+    "resources/svg/monster/ears3.svg"
+]
+function changeEars () {
+    let i = document.getElementById("ears").value;
+    document.getElementsByClassName("ear")[0].setAttribute("data", ears[i]);
+}
