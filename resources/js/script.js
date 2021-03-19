@@ -44,7 +44,7 @@ function changeCanvasColor () {
 }
 
 // to change monster's body hue rotation
-function hueFunction(className, hueVal) {
+function hueFunction (className, hueVal) {
     var setAs = hueVal + "deg"
     document.getElementsByClassName(className)[0].setAttribute("style", "-webkit-filter:hue-rotate(" + setAs + ")");
   }
