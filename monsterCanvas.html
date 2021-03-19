@@ -21,8 +21,7 @@
         </div>
         
         <input type="color" id="colorInputColor" value="#232933">
-        <input type="button" id="colorButton" value="Change" onclick="changeCanvasColor()">
-        <button onclick="changeMonsterBody()">Body</button>
+        <input type="button" id="colorButton" value="Change" onclick="changeCanvasColor(this.value)">
         <!-- mouths select -->
         <label>Mouth</label>
         <select id="mouths" onchange="changeMouth()">
@@ -73,6 +72,7 @@
             <option value="2">3</option>
         </select>
 
+        <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="bodyHueRotate" oninput="hueFunction(this.value)">
         <script type="text/javascript" src="resources/js/script.js"></script>
     </body>
 </html>

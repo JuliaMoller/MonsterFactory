@@ -5,10 +5,11 @@ function changeCanvasColor () {
     document.getElementById("monsterCanvas").style.backgroundColor = color;
 }
 
-// to change monster's body color
-function changeMonsterBody () {
-     document.getElementById("monsterBody").style.filter = "saturate(85%) hue-rotate(250deg)";
-}
+// to change monster's body hue rotation
+function hueFunction(hueVal) {
+    var setAs = hueVal + "deg"
+    document.getElementById("monsterBody").setAttribute("style", "-webkit-filter:hue-rotate(" + setAs + ")");
+  }
 
 // to change monster's mounth
 var mouths = [  

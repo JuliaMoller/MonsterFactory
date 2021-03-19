@@ -62,7 +62,7 @@
     top: 0;
     left: 0;
     z-index: 1;
-    filter: saturate(100%) hue-rotate(130deg) drop-shadow(-3px 3px 5px rgba(70, 70, 70, 0.384));
+    filter: drop-shadow(-3px 3px 5px rgba(70, 70, 70, 0.384));
 }
 .shadow {
     position: absolute;
