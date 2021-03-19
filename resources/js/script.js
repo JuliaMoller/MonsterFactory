@@ -1,3 +1,41 @@
+var parts = {
+    "mouths": [  
+        "resources/svg/monster/mouth1.svg", 
+        "resources/svg/monster/mouth2.svg", 
+        "resources/svg/monster/mouth3.svg"
+    ],
+    "paws": [  
+        "resources/svg/monster/paws1.svg", 
+        "resources/svg/monster/paws2.svg", 
+        "resources/svg/monster/paws3.svg"
+    ],
+    "tails": [  
+        "resources/svg/monster/tail1.svg", 
+        "resources/svg/monster/tail2.svg", 
+        "resources/svg/monster/tail3.svg"
+    ],
+    "horns": [  
+        "resources/svg/monster/horn1.svg", 
+        "resources/svg/monster/horn2.svg", 
+        "resources/svg/monster/horn3.svg"
+    ],
+    "ears": [  
+        "resources/svg/monster/ears1.svg", 
+        "resources/svg/monster/ears2.svg", 
+        "resources/svg/monster/ears3.svg"
+    ],
+    "eyes": [  
+        "resources/svg/monster/eyes1.svg", 
+        "resources/svg/monster/eyes2.svg", 
+        "resources/svg/monster/eyes3.svg"
+    ],
+    "hairs": [
+        "resources/svg/monster/hair1.svg", 
+        "resources/svg/monster/hair2.svg", 
+        "resources/svg/monster/hair3.svg"
+    ],
+}
+
 
 // to change canvas backgorund
 function changeCanvasColor () {
@@ -11,79 +49,8 @@ function hueFunction(className, hueVal) {
     document.getElementsByClassName(className)[0].setAttribute("style", "-webkit-filter:hue-rotate(" + setAs + ")");
   }
 
-// to change monster's mounth
-var mouths = [  
-    "resources/svg/monster/mouth1.svg", 
-    "resources/svg/monster/mouth2.svg", 
-    "resources/svg/monster/mouth3.svg"
-]
-function changeMouth() {
-    var i = document.getElementById("mouths").value;
-    document.getElementsByClassName("mouth")[0].setAttribute("data", mouths[i]);
-}
-
-// to change monster's paws
-var paws = [  
-    "resources/svg/monster/paws1.svg", 
-    "resources/svg/monster/paws2.svg", 
-    "resources/svg/monster/paws3.svg"
-]
-function changePaws () {
-    let i = document.getElementById("paws").value;
-    document.getElementsByClassName("paw")[0].setAttribute("data", paws[i]);
-}
-
-// to change monster's tails
-var tails = [  
-    "resources/svg/monster/tail1.svg", 
-    "resources/svg/monster/tail2.svg", 
-    "resources/svg/monster/tail3.svg"
-]
-function changeTails () {
-    let i = document.getElementById("tails").value;
-    document.getElementsByClassName("tail")[0].setAttribute("data", tails[i]);
-}
-
-// to change monster's horns
-var horns = [  
-    "resources/svg/monster/horn1.svg", 
-    "resources/svg/monster/horn2.svg", 
-    "resources/svg/monster/horn3.svg"
-]
-function changeHorns () {
-    let i = document.getElementById("horns").value;
-    document.getElementsByClassName("horn")[0].setAttribute("data", horns[i]);
-}
-
-// to change monster's horns
-var ears = [  
-    "resources/svg/monster/ears1.svg", 
-    "resources/svg/monster/ears2.svg", 
-    "resources/svg/monster/ears3.svg"
-]
-function changeEars () {
-    let i = document.getElementById("ears").value;
-    document.getElementsByClassName("ear")[0].setAttribute("data", ears[i]);
-}
-
-// to change monster's hairs
-var hairs = [  
-    "resources/svg/monster/hair1.svg", 
-    "resources/svg/monster/hair2.svg", 
-    "resources/svg/monster/hair3.svg"
-]
-function changeHairs () {
-    let i = document.getElementById("hairs").value;
-    document.getElementsByClassName("hair")[0].setAttribute("data", hairs[i]);
-}
-
-// to change monster's eyes
-var eyes = [  
-    "resources/svg/monster/eyes1.svg", 
-    "resources/svg/monster/eyes2.svg", 
-    "resources/svg/monster/eyes3.svg"
-]
-function changeEyes () {
-    let i = document.getElementById("eyes").value;
-    document.getElementsByClassName("eye")[0].setAttribute("data", eyes[i]);
+// to change monster's body parts
+function changeSvg (className, sectionId) {
+    var i = document.getElementById(sectionId).value;
+    document.getElementsByClassName(className)[0].setAttribute("data", parts[sectionId][i]);
 }

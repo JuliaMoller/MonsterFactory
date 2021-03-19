@@ -24,14 +24,14 @@
         <input type="button" id="colorButton" value="Change" onclick="changeCanvasColor(this.value)">
         <!-- mouths select -->
         <label>Mouth</label>
-        <select id="mouths" onchange="changeMouth()">
+        <select id="mouths" onchange="changeSvg('mouth', this.id)">
             <option value="0">1</option>
             <option value="1">2</option>
             <option value="2">3</option>
         </select>
         <!-- paws select -->
         <label>Paw</label>
-        <select id="paws" onchange="changePaws()">
+        <select id="paws" onchange="changeSvg('paw', this.id)">
             <option value="0">1</option>
             <option value="1">2</option>
             <option value="2">3</option>
@@ -39,35 +39,35 @@
         <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="pawsHueRotate" oninput="hueFunction('paw', this.value)">
 
         <label>Tail</label>
-        <select id="tails" onchange="changeTails()">
+        <select id="tails" onchange="changeSvg('tail', this.id)">
             <option value="0">1</option>
             <option value="1">2</option>
             <option value="2">3</option>
         </select>
 
         <label>Horn</label>
-        <select id="horns" onchange="changeHorns()">
+        <select id="horns" onchange="changeSvg('horn', this.id)">
             <option value="0">1</option>
             <option value="1">2</option>
             <option value="2">3</option>
         </select>
 
         <label>Ear</label>
-        <select id="ears" onchange="changeEars()">
+        <select id="ears" onchange="changeSvg('ear', this.id)">
             <option value="0">1</option>
             <option value="1">2</option>
             <option value="2">3</option>
         </select>
 
         <label>Hair</label>
-        <select id="hairs" onchange="changeHairs()">
+        <select id="hairs" onchange="changeSvg('hair', this.id)">
             <option value="0">1</option>
             <option value="1">2</option>
             <option value="2">3</option>
         </select>
 
         <label>Eye</label>
-        <select id="eyes" onchange="changeEyes()">
+        <select id="eyes" onchange="changeSvg('eye', this.id)">
             <option value="0">1</option>
             <option value="1">2</option>
             <option value="2">3</option>
