@@ -31,3 +31,14 @@ function changePaws () {
     let i = document.getElementById("paws").value;
     document.getElementsByClassName("paw")[0].setAttribute("data", paws[i]);
 }
+
+// to change monster's tails
+var tails = [  
+    "resources/svg/monster/tail1.svg", 
+    "resources/svg/monster/tail2.svg", 
+    "resources/svg/monster/tail3.svg"
+]
+function changeTails () {
+    let i = document.getElementById("tails").value;
+    document.getElementsByClassName("tail")[0].setAttribute("data", tails[i]);
+}
