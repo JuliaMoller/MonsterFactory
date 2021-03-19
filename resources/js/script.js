@@ -6,9 +6,9 @@ function changeCanvasColor () {
 }
 
 // to change monster's body hue rotation
-function hueFunction(hueVal) {
+function hueFunction(className, hueVal) {
     var setAs = hueVal + "deg"
-    document.getElementById("monsterBody").setAttribute("style", "-webkit-filter:hue-rotate(" + setAs + ")");
+    document.getElementsByClassName(className)[0].setAttribute("style", "-webkit-filter:hue-rotate(" + setAs + ")");
   }
 
 // to change monster's mounth
