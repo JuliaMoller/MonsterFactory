@@ -64,3 +64,14 @@ function changeEars () {
     let i = document.getElementById("ears").value;
     document.getElementsByClassName("ear")[0].setAttribute("data", ears[i]);
 }
+
+// to change monster's hairs
+var hairs = [  
+    "resources/svg/monster/hair1.svg", 
+    "resources/svg/monster/hair2.svg", 
+    "resources/svg/monster/hair3.svg"
+]
+function changeHairs () {
+    let i = document.getElementById("hairs").value;
+    document.getElementsByClassName("hair")[0].setAttribute("data", hairs[i]);
+}
