@@ -20,7 +20,7 @@
             <div class="row">
                 <div class="col">
                     <!-- eyes select -->
-                    <div class="my-5">
+                    <div class="my-3">
                         <select class="selectpicker" id="eyes" data-style="btn-dark" onchange="changeSvg('eye', this.id)">
                             <option data-content="<img class='option-icon' src='resources/img/eyes/eyeIcon_1.png'>" value="0"></option>
                             <option data-content="<img class='option-icon' src='resources/img/eyes/eyeIcon_2.png'>" value="1"></option>
@@ -28,11 +28,13 @@
                         </select>
                     </div>                    
                     <!-- horns select -->
-                    <select id="horns" onchange="changeSvg('horn', this.id)">
-                        <option value="0">1</option>
-                        <option value="1">2</option>
-                        <option value="2">3</option>
-                    </select>
+                    <div class="my-3">
+                        <select class="selectpicker" id="horns" data-style="btn-dark" onchange="changeSvg('horn', this.id)">
+                            <option data-content="<img class='option-icon' src='resources/img/horns/horn_1.png'>" value="0"></option>
+                            <option data-content="<img class='option-icon' src='resources/img/horns/horn_2.png'>" value="1"></option>
+                            <option data-content="<img class='option-icon' src='resources/img/horns/horn_3.png'>" value="2"></option>
+                        </select>
+                    </div>  
                     <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="hornsHueRotate" oninput="hueFunction('horn', this.value)">
                     <!-- ears select -->
                     <label>Ear</label>
