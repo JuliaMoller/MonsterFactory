@@ -37,12 +37,13 @@
                     </div>  
                     <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="hornsHueRotate" oninput="hueFunction('horn', this.value)">
                     <!-- ears select -->
-                    <label>Ear</label>
-                    <select id="ears" onchange="changeSvg('ear', this.id)">
-                        <option value="0">1</option>
-                        <option value="1">2</option>
-                        <option value="2">3</option>
-                    </select>
+                    <div class="my-3">
+                        <select class="selectpicker" id="ears" data-style="btn-dark" onchange="changeSvg('ear', this.id)">
+                            <option data-content="<img class='option-icon' src='resources/img/ears/ear_1.png'>" value="0"></option>
+                            <option data-content="<img class='option-icon' src='resources/img/ears/ear_2.png'>" value="1"></option>
+                            <option data-content="<img class='option-icon' src='resources/img/ears/ear_3.png'>" value="2"></option>
+                        </select>
+                    </div>
                     <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="earsHueRotate" oninput="hueFunction('ear', this.value)">
                     <!-- hair select -->
                     <label>Hair</label>
