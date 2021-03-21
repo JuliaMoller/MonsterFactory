@@ -20,13 +20,13 @@
             <div class="row">
                 <div class="col">
                     <!-- eyes select -->
-                    <label>Eye</label>
-                    <select id="eyes" onchange="changeSvg('eye', this.id)">
-                        <option value="0">1</option>
-                        <option value="1">2</option>
-                        <option value="2">3</option>
-                    </select>
-                    
+                    <div class="my-5">
+                        <select class="selectpicker" id="eyes" data-style="btn-dark" onchange="changeSvg('eye', this.id)">
+                            <option data-content="<img class='option-icon' src='resources/img/eyes/eyeIcon_1.png'>" value="0"></option>
+                            <option data-content="<img class='option-icon' src='resources/img/eyes/eyeIcon_2.png'>" value="1"></option>
+                            <option data-content="<img class='option-icon' src='resources/img/eyes/eyeIcon_3.png'>" value="2"></option>
+                        </select>
+                    </div>                    
                     <!-- horns select -->
                     <label>Horn</label>
                     <select id="horns" onchange="changeSvg('horn', this.id)">
