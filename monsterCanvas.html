@@ -75,12 +75,13 @@
                 </div>
                 <div class="col">
                     <!-- mouths select -->
-                    <label>Mouth</label>
-                    <select id="mouths" onchange="changeSvg('mouth', this.id)">
-                        <option value="0">1</option>
-                        <option value="1">2</option>
-                        <option value="2">3</option>
-                    </select>
+                    <div class="my-3">
+                        <select class="selectpicker" id="mouths" data-style="btn-dark" onchange="changeSvg('mouth', this.id)">
+                            <option data-content="<img class='option-icon' src='resources/img/mouths/mouth_1.png'>" value="0"></option>
+                            <option data-content="<img class='option-icon' src='resources/img/mouths/mouth_2.png'>" value="1"></option>
+                            <option data-content="<img class='option-icon' src='resources/img/mouths/mouth_3.png'>" value="2"></option>
+                        </select>
+                    </div>
                     <!-- tails select -->
                     <label>Tail</label>
                     <select id="tails" onchange="changeSvg('tail', this.id)">
