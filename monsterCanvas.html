@@ -75,11 +75,6 @@
                         <input type="color" id="colorInputColor" value="#232933">
                         <input class="btn btn-primary" type="button" id="colorButton" value="CHANGE" onclick="changeCanvasColor(this.value)">
                     </div>
-                    <div>
-                        <!-- body select -->
-                        <label class="text-primary">Body</label> <br/>
-                        <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="bodyHueRotate" oninput="hueFunction('monster-body', this.value)">
-                    </div>
                 </div>
                 <div class="col">
                     <!-- mouths select -->
@@ -108,6 +103,11 @@
                         </select>
                     </div>
                     <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="pawsHueRotate" oninput="hueFunction('paw', this.value)">
+                    <div>
+                        <!-- body select -->
+                        <label class="text-primary">Body</label> <br/>
+                        <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="bodyHueRotate" oninput="hueFunction('monster-body', this.value)">
+                    </div>
                 </div>
             </div>
         </div>
