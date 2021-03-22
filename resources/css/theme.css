@@ -44,6 +44,10 @@ html {
     border: 0;
 }
 
+.btn-dark {
+    background-color: #1D1D24 !important;
+}
+
 /* BTN outline */
 
 .btn-outline-success {

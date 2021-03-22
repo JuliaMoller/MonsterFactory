@@ -55,26 +55,6 @@
                         </select>
                     </div>
                     <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="hairssHueRotate" oninput="hueFunction('hair', this.value)">
-                    
-                </div>
-                <div class="col">
-                    <!-- Monster Canvas -->
-                    <div id="monsterCanvas" class="parent my-4">
-                        <object data="resources/svg/monster/mouth1.svg" class="mouth" type="image/svg+xml"></object>
-                        <object data="resources/svg/monster/tail1.svg" class="tail" type="image/svg+xml"></object>
-                        <object data="resources/svg/monster/paws1.svg" class="paw" type="image/svg+xml"></object>
-                        <object data="resources/svg/monster/horn1.svg" class="horn" type="image/svg+xml"></object>
-                        <object data="resources/svg/monster/ears1.svg" class="ear" type="image/svg+xml"></object>
-                        <object data="resources/svg/monster/hair1.svg" class="hair" type="image/svg+xml"></object>
-                        <object data="resources/svg/monster/eyes1.svg" class="eye" type="image/svg+xml"></object>
-                        <object data="resources/svg/monster/body.svg" class="monster-body" type="image/svg+xml" id="monsterBody"></object>
-                        <object data="resources/svg/monster/shadow.svg" class="shadow" type="image/svg+xml"></object>
-                    </div>
-                    <div>
-                        <!-- canvas background colour -->
-                        <input type="color" id="colorInputColor" value="#232933">
-                        <input class="btn btn-primary" type="button" id="colorButton" value="CHANGE" onclick="changeCanvasColor(this.value)">
-                    </div>
                 </div>
                 <div class="col">
                     <!-- mouths select -->
@@ -103,6 +83,27 @@
                         </select>
                     </div>
                     <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="pawsHueRotate" oninput="hueFunction('paw', this.value)">
+                </div>
+                <div class="col">
+                    <!-- Monster Canvas -->
+                    <div id="monsterCanvas" class="parent my-4">
+                        <object data="resources/svg/monster/mouth1.svg" class="mouth" type="image/svg+xml"></object>
+                        <object data="resources/svg/monster/tail1.svg" class="tail" type="image/svg+xml"></object>
+                        <object data="resources/svg/monster/paws1.svg" class="paw" type="image/svg+xml"></object>
+                        <object data="resources/svg/monster/horn1.svg" class="horn" type="image/svg+xml"></object>
+                        <object data="resources/svg/monster/ears1.svg" class="ear" type="image/svg+xml"></object>
+                        <object data="resources/svg/monster/hair1.svg" class="hair" type="image/svg+xml"></object>
+                        <object data="resources/svg/monster/eyes1.svg" class="eye" type="image/svg+xml"></object>
+                        <object data="resources/svg/monster/body.svg" class="monster-body" type="image/svg+xml" id="monsterBody"></object>
+                        <object data="resources/svg/monster/shadow.svg" class="shadow" type="image/svg+xml"></object>
+                    </div>
+                    <div>
+                        <!-- canvas background colour -->
+                        <input type="color" id="colorInputColor" value="#232933">
+                        <input class="btn btn-primary" type="button" id="colorButton" value="CHANGE" onclick="changeCanvasColor(this.value)">
+                    </div>
+                </div>
+                <div class="col">
                     <div class="my-3">
                         <div class="card bg-dark rounded text-center p-3">
                             <!-- body select -->
