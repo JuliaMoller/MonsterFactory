@@ -12,6 +12,7 @@
         <!-- Custom monter factory style css -->
         <link href="resources/css/monsterCanvas.css" rel="stylesheet" type="text/css"/>
         <link href="resources/css/select-option.css" rel="stylesheet" type="text/css"/>
+        <link href="resources/css/input-color.css" rel="stylesheet" type="text/css"/>
 
     </head>
 
@@ -69,12 +70,16 @@
                         <object data="resources/svg/monster/body.svg" class="monster-body" type="image/svg+xml" id="monsterBody"></object>
                         <object data="resources/svg/monster/shadow.svg" class="shadow" type="image/svg+xml"></object>
                     </div>
-                    <!-- canvas background colour -->
-                    <input type="color" id="colorInputColor" value="#232933">
-                    <input class="btn btn-primary" type="button" id="colorButton" value="CHANGE" onclick="changeCanvasColor(this.value)">
-                    <!-- body select -->
-                    <label>Body</label>
-                    <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="bodyHueRotate" oninput="hueFunction('monster-body', this.value)">
+                    <div>
+                        <!-- canvas background colour -->
+                        <input type="color" id="colorInputColor" value="#232933">
+                        <input class="btn btn-primary" type="button" id="colorButton" value="CHANGE" onclick="changeCanvasColor(this.value)">
+                    </div>
+                    <div>
+                        <!-- body select -->
+                        <label class="text-primary">Body</label> <br/>
+                        <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="bodyHueRotate" oninput="hueFunction('monster-body', this.value)">
+                    </div>
                 </div>
                 <div class="col">
                     <!-- mouths select -->
