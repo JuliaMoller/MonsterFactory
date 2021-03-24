@@ -19,7 +19,7 @@
     <body>
         <div class="container">
             <div class="row">
-                <div class="col">
+                <div class="col text-center">
                     <!-- eyes select -->
                     <div class="my-3">
                         <select class="selectpicker" id="eyes" data-style="btn-dark" onchange="changeSvg('eye', this.id)">
@@ -56,7 +56,7 @@
                     </div>
                     <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="hairssHueRotate" oninput="hueFunction('hair', this.value)">
                 </div>
-                <div class="col">
+                <div class="col text-center">
                     <!-- Monster Canvas -->
                     <div id="monsterCanvas" class="parent my-4">
                         <object data="resources/svg/monster/mouth1.svg" class="mouth" type="image/svg+xml"></object>
@@ -75,7 +75,7 @@
                         <input class="btn btn-primary" type="button" id="colorButton" value="CHANGE" onclick="changeCanvasColor(this.value)">
                     </div>
                 </div>
-                <div class="col">
+                <div class="col text-center">
                     <!-- mouths select -->
                     <div class="my-3">
                         <select class="selectpicker" id="mouths" data-style="btn-dark" onchange="changeSvg('mouth', this.id)">
