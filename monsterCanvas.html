@@ -13,6 +13,7 @@
         <link href="resources/css/monsterCanvas.css" rel="stylesheet" type="text/css"/>
         <link href="resources/css/select-option.css" rel="stylesheet" type="text/css"/>
         <link href="resources/css/input-color.css" rel="stylesheet" type="text/css"/>
+        <link href="resources/css/slider.css" rel="stylesheet" type="text/css"/>
 
     </head>
 
@@ -36,7 +37,7 @@
                             <option data-content="<img class='option-icon' src='resources/img/horns/horn_3.png'>" value="2"></option>
                         </select>
                     </div>  
-                    <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="hornsHueRotate" oninput="hueFunction('horn', this.value)">
+                    <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="hornsHueRotate" class="slider" oninput="hueFunction('horn', this.value)">
                     <!-- ears select -->
                     <div class="my-3">
                         <select class="selectpicker" id="ears" data-style="btn-dark" onchange="changeSvg('ear', this.id)">
@@ -45,7 +46,7 @@
                             <option data-content="<img class='option-icon' src='resources/img/ears/ear_3.png'>" value="2"></option>
                         </select>
                     </div>
-                    <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="earsHueRotate" oninput="hueFunction('ear', this.value)">
+                    <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="earsHueRotate" class="slider" oninput="hueFunction('ear', this.value)">
                     <!-- hair select -->
                     <div class="my-3">
                         <select class="selectpicker" id="hairs" data-style="btn-dark" onchange="changeSvg('hair', this.id)">
@@ -54,7 +55,7 @@
                             <option data-content="<img class='option-icon' src='resources/img/hair/hairIcon_3.png'>" value="2"></option>
                         </select>
                     </div>
-                    <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="hairssHueRotate" oninput="hueFunction('hair', this.value)">
+                    <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="hairssHueRotate" class="slider" oninput="hueFunction('hair', this.value)">
                 </div>
                 <div class="col text-center">
                     <!-- Monster Canvas -->
@@ -92,7 +93,7 @@
                             <option data-content="<img class='option-icon' src='resources/img/tails/tails_3.png'>" value="2"></option>
                         </select>
                     </div>
-                    <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="tailsHueRotate" oninput="hueFunction('tail', this.value)">
+                    <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="tailsHueRotate" class="slider" oninput="hueFunction('tail', this.value)">
                     <!-- paws select -->
                     <div class="my-3">
                         <select class="selectpicker" id="paws" data-style="btn-dark" onchange="changeSvg('paw', this.id)">
@@ -101,12 +102,12 @@
                             <option data-content="<img class='option-icon' src='resources/img/paws/paw_3.png'>" value="2"></option>
                         </select>
                     </div>
-                    <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="pawsHueRotate" oninput="hueFunction('paw', this.value)">
+                    <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="pawsHueRotate" class="slider" oninput="hueFunction('paw', this.value)">
                     <div class="my-3 mx-1">
                         <div class="card bg-dark rounded-sm text-center mx-4 p-3">
                             <!-- body select -->
                             <label class="text-primary"><h5>BODY</h5></label> <br/>
-                            <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="bodyHueRotate" oninput="hueFunction('monster-body', this.value)">
+                            <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="bodyHueRotate" class="slider" oninput="hueFunction('monster-body', this.value)">
                         </div>
                     </div>
                 </div>
