@@ -2,9 +2,9 @@
     outline: 0;
     -webkit-appearance: none;
     width: 13.5em;
-    height: 7px;
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 3px #000000c0;
+    height: 10px;
+    border-radius: 5px;
+    -webkit-box-shadow: inset 2px 1px 2px #000000c0;
     background: linear-gradient(to right, 
                 hsl(146deg 80% 37%) 0%, 
                 hsl(166deg 100% 33%) 8.3%, 
@@ -23,10 +23,11 @@
 
 .slider::-webkit-slider-thumb { 
   -webkit-appearance: none;
+  -webkit-box-shadow: 2px 1px 2px #000000c0;
   width: 18px;
   height: 18px;
   border-radius: 10px;
-  background-color:#19FDEF;
+  background-color: #2ED67A;
   overflow: visible;
   cursor: pointer;
 }
