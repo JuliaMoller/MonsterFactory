@@ -21,11 +21,22 @@ html {
     color: #1D1D24 !important;
     border: 0;
 }
+
 .btn-secondary {
     background-color: #2ED67A !important;
     color: #1D1D24 !important;
+    transition: 1s ease-out;
     border: 0;
 }
+
+.btn-secondary:hover {
+    background: linear-gradient(to right, #11a752, #00a881, 
+                #00a8a8, #00a2c7, #728df8, 
+                #ba79ec, #ed6ec3, #ff6685) !important;
+    color: #8747E2 !important;
+    border: 0;
+}
+
 .btn-info {
     background-color: #19FDEF !important;
     color: #1D1D24 !important;
