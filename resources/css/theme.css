@@ -3,10 +3,10 @@
     margin: 0;
     box-sizing: border-box;
 }
-/* #1D1D24 */
+/* #8747E2 */
 body {
     background-color: #8747E2;
-    background-image: url("../img/pattern/pattern.png");
+    background: fixed linear-gradient(to bottom, #8e3ffca4, #2c0366ea), url("../img/pattern/pattern.png"), #1D1D24;
     font-family: 'Quicksand', sans-serif;
 }
 
