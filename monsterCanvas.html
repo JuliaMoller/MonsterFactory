@@ -70,13 +70,14 @@
                         <object data="resources/svg/monster/body.svg" class="monster-body" type="image/svg+xml" id="monsterBody"></object>
                         <object data="resources/svg/monster/shadow.svg" class="shadow" type="image/svg+xml"></object>
                     </div>
-                    <div class="text-left">
+                    <div class="d-flex align-content-center">
                         <!-- canvas background colour -->
-                        <input type="color" id="colorInputColor" value="#232933">
-                        <input class="btn btn-primary btn-sm" type="button" id="colorButton" value="CHANGE" onclick="changeCanvasColor(this.value)">
+                        <input class="border border-warning" type="color" id="colorInputColor" value="#232933">
+                        <input class="btn btn-warning btn-sm rounded-0" type="button" id="colorButton" value="APPLY" onclick="changeCanvasColor(this.value)">
+                        <input class="form-control mt-1 mx-3" type="text" id="monsterName" placeholder="What is my name?">
                     </div>
                     <div class="mt-4">
-                        <button class="btn btn-secondary btn-block">DONE</button>
+                        <button class="btn btn-secondary btn-block" type="submit">DONE</button>
                     </div>
                 </div>
                 <div class="col text-center">
