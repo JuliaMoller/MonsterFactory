@@ -1,0 +1,120 @@
+/* SIDENAV MENU */
+#mySidenav{
+    display: none !important;
+}
+
+#mySidenav ul{
+    margin-top: 13%;
+}
+
+#mySidenav a {
+    position: absolute;
+    left: -135px; 
+    transition: 0.3s;
+    padding: 30px;
+    width: 270px;
+    height: 96px;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+#mySidenav .nav-item {
+    margin-top: 10em;
+    margin-bottom: 5em;
+}
+
+#mySidenav a:hover {
+    left: -10PX;
+    background: linear-gradient(to right, #a746c5, #5171ca, #1daf99)!important;
+    background: -webkit-linear-gradient(to right, #a746c5, #5171ca, #1daf99)!important;
+    transition: 0.5s;
+}
+
+#mySidenav a .icon {
+    display: block;
+    float: right;
+    padding-bottom: 20px;
+    width: 4rem;
+    height: 4rem;
+    pointer-events: none;
+    filter: invert(90%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
+
+#mySidenav a:hover > .icon {
+    display: none;
+}
+#mySidenav a span {
+    display: none;
+}
+#mySidenav a:hover > span {
+    display: block;
+}
+
+/* mobile navbar */
+.mobileNav {
+    display: block !important;
+    z-index: 200;
+}
+
+.hamburger {
+    cursor: pointer;
+    font-size: 4em;
+    z-index: 5;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+    font-size: 2em;
+  }
+  
+
+  .overlay a:hover, .overlay a:focus {
+    color: #2ED67A !important;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 5px;
+    right: 45px;
+    font-size: 3em;
+  }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    #mySidenav{
+        display: block !important;
+    }
+
+    /* mobile navbar */
+    .mobileNav {
+        display: none !important;
+    }
+
+    .hamburger {
+        display: none !important;
+    }
+}
