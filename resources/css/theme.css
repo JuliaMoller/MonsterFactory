@@ -23,17 +23,8 @@ html {
 }
 
 .btn-secondary {
-    background-color: #2ED67A !important;
+    background-color: #169E8A !important;
     color: #1D1D24 !important;
-    transition: 1s ease-out;
-    border: 0;
-}
-
-.btn-secondary:hover {
-    background: linear-gradient(to right, #11a752, #00a881, 
-                #00a8a8, #00a2c7, #728df8, 
-                #ba79ec, #ed6ec3, #ff6685) !important;
-    color: #8747E2 !important;
     border: 0;
 }
 
@@ -43,9 +34,20 @@ html {
     border: 0;
 }
 .btn-success {
-    background-color: #5E17A6 !important;
+    background-color: #169E8A !important;
+    color: #1D1D24 !important;
+    transition: 1s ease-out;
     border: 0;
 }
+
+.btn-success:hover {
+    background: linear-gradient(to right, #11a752, #00a881, 
+                #00a8a8, #00a2c7, #728df8, 
+                #ba79ec, #ed6ec3, #ff6685) !important;
+    color: #8747E2 !important;
+    border: 0;
+}
+
 .btn-warning {
     background-color: #FA650A !important;
     color: #1D1D24 !important;
