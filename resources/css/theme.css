@@ -120,6 +120,9 @@ html {
     background-color: #1D1D24 !important;
 }
 
+/* borders */
+
 .border-warning {
+    border-width: 3px !important;
     border-color: #FA650A !important;
 }
