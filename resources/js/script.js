@@ -52,5 +52,5 @@ function hueFunction (className, hueVal) {
 // to change monster's body parts
 function changeSvg (className, sectionId) {
     var i = document.getElementById(sectionId).value;
-    document.getElementsByClassName(className)[0].setAttribute("data", parts[sectionId][i]);
+    document.getElementsByClassName(className)[0].setAttribute("src", parts[sectionId][i]);
 }
