@@ -1,9 +1,10 @@
 function printMonster (){
+    // transform all objects inside the div to img
     var objs =  document.querySelectorAll("#monsterCanvas object");
     var monsterBg = document.getElementById("monsterCanvas");
     var monsterDiv = document.createElement("div");
     monsterDiv.setAttribute("class", "parent");
-    monsterDiv.style.backgroundColor = monsterBg.style.backgroundColor;
+   // monsterDiv.style.backgroundColor = monsterBg.style.backgroundColor;
 
     for (var i = 0; i < objs.length; i++) {
         var data = objs[i].getAttribute("data");
@@ -20,10 +21,22 @@ function printMonster (){
         monsterDiv.appendChild(img);
     }
 
-    document.body.appendChild(monsterDiv);
-    console.log(monsterDiv);
+   document.body.appendChild(monsterDiv);
+   
+    // dom to image
+
+    setTimeout(() => {
+        domtoimage.toPng(monsterDiv)
+        .then(function (dataUrl) {
+            var img = new Image();
+            img.src = dataUrl;
+            document.body.appendChild(img);
+        })
+        .catch(function (error) {
+            console.error('oops, something went wrong!', error);
+        });
+    }, 200);
+
 }
-
-
 
 
