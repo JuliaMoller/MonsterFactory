@@ -54,3 +54,8 @@ function changeSvg (className, sectionId) {
     var i = document.getElementById(sectionId).value;
     document.getElementsByClassName(className)[0].setAttribute("src", parts[sectionId][i]);
 }
+
+//to update monster's name
+function updateName(e) {
+    document.getElementById("monsterName").innerHTML = e;
+}
