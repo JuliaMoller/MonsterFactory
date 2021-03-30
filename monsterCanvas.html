@@ -4,6 +4,7 @@
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <meta property="og:image" content="https://example.com/my_image.jpg">
         <meta name="description" content="This is Julia's monster factory"/>
         <meta name="author" content="JuliaMoller"/>
 
@@ -23,6 +24,7 @@
         <link href="resources/css/select-option.css" rel="stylesheet" type="text/css"/>
         <link href="resources/css/input-color.css" rel="stylesheet" type="text/css"/>
         <link href="resources/css/slider.css" rel="stylesheet" type="text/css"/>
+        <link href="resources/css/modal.css" rel="stylesheet" type="text/css"/>
 
     </head>
 
@@ -124,8 +126,7 @@
                             <input class="form-control mt-1 ml-4" type="text" id="monsterName" placeholder="What is my name?" oninput="updateName(this.value)">
                         </div>
                         <div class="mt-4">
-                            <button class="btn btn-success btn-block" type="submit" onclick="printMonster()">SAVE</button>
-                            
+                            <button class="btn btn-success btn-block" id="done" type="submit" onclick="printMonster()">DONE</button>
                         </div>
                 </div>
                 <div class="col-6 col-lg-3 text-center order-lg-3 order-2">
@@ -161,6 +162,21 @@
                             <label class="text-primary mt-3"><h4>BODY</h4></label> <br/>
                             <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="bodyHueRotate" class="slider mx-auto px-5" oninput="hueFunction('monster-body', this.value)">
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- MODAL -->
+        <div id="monsterModal" class="modal">
+            <div class="modal-content bg-gradient-modal">
+                <span class="close text-right">&times;</span>
+                <div class="text-center">
+                    <div id="monsterCard" class="card monster-card bg-transparent border-0">
+                        <!-- the final image will appears here -->
+                    </div>
+                    <div class="mt-5">
+                        <button class="btn btn-success" type="submit" onclick="saveMonster()">SAVE</button>
+                        <button class="btn btn-warning" type="submit" onclick="shareFacebook()">FACEBOOK</button>
                     </div>
                 </div>
             </div>

@@ -122,6 +122,12 @@ html {
     background-color: #1D1D24 !important;
 }
 
+.bg-gradient-modal {
+    background-color: #FAD961;
+    background-image: linear-gradient(90deg, #dbb323 0%, #f85c01 100%);
+    
+}
+
 /* borders */
 
 .border-warning {
