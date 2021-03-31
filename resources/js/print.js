@@ -1,3 +1,8 @@
+
+var img = new Image();
+img.setAttribute("class", "monsterFinalImage");
+var modalImg = document.getElementById ("monsterCard");
+
 // to print image
 function printMonster (){
 
@@ -5,12 +10,8 @@ function printMonster (){
     setTimeout(() => {
         domtoimage.toPng(monsterCanvas)
         .then(function (dataUrl) {
-            
-            var img = new Image();
-            img.src = dataUrl;
-            img.setAttribute("class", "monsterFinalImage")
-            var modalImg = document.getElementById ("monsterCard");
 
+            img.src = dataUrl;
             modalImg.appendChild(img);
         })
         .catch(function (error) {
@@ -46,10 +47,7 @@ function saveMonster (){
     setTimeout(() => {
         domtoimage.toBlob(monsterCanvas)
         .then(function (blob) {
-            saveAs(blob, "monster.png")
-            // var img = new Image();
-            // img.src = dataUrl;
-            // document.body.appendChild(img);
+            saveAs(blob, "monster.png");
         })
         .catch(function (error) {
             console.error('oops, something went wrong!', error);
@@ -60,21 +58,23 @@ function saveMonster (){
 
 // to share in facebook
 
-function shareFacebook (){
-    var params = "menubar=no,toolbar=no,status=no,width=570,height=570"; // for window
+// function shareFacebook (){
+//     var params = "menubar=no,toolbar=no,status=no,width=570,height=570"; // for window
 
-    setTimeout(() => {
-        domtoimage.toPng(monsterCanvas)
-        .then(function (dataUrl) {
+//     setTimeout(() => {
+//         domtoimage.toPng(monsterCanvas)
+//         .then(function (dataUrl) {
 
-            var img = new Image();
-            img.src = dataUrl;
-            document.body.appendChild(img)
+//             img.src = dataUrl;
+//             modalImg.appendChild(img);
 
-            console.log (dataUrl);
-            let shareUrl = "http://www.facebook.com/sharer/sharer.php?u=" + img;
-            window.open(shareUrl,"NewWindow" , params);  
+//             var i = document.getElementById("monsterCard");
 
-        });
-    }, 200);
-}
+//             console.log (encodeURIComponent(dataUrl));
+//             let shareUrl = "http://www.facebook.com/sharer/sharer.php?u=" + img;
+//             window.open(shareUrl,"NewWindow" , params);  
+
+//         });
+//     }, 200);
+// }
+
