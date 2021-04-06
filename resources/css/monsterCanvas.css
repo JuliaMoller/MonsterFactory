@@ -9,6 +9,7 @@
     background-color: #232933;
     border-radius: 10px;
 }
+
 .mouth {
     position: absolute;
     top: 0;
@@ -71,4 +72,14 @@
     left: 0;
     z-index: 0;
     filter: drop-shadow(-3px 3px 5px rgba(70, 70, 70, 0.384))
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    /* Monster Canvas */
+   /* canvas */
+       .parent {
+           width: 25rem;
+           height: 25rem;
+       }
 }
