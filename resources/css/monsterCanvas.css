@@ -65,7 +65,7 @@
     z-index: 1;
     filter: drop-shadow(-3px 3px 5px rgba(70, 70, 70, 0.384));
 }
-.shadow {
+.shadow-monster {
     position: absolute;
     top: 0;
     left: 0;
