@@ -1,7 +1,7 @@
 .slider {
     outline: 0;
     -webkit-appearance: none;
-    width: 12em;
+    
     height: 10px;
     border-radius: 5px;
     -webkit-box-shadow: inset 2px 1px 2px #000000c0;
@@ -30,4 +30,14 @@
   background-color: #2ED67A;
   overflow: visible;
   cursor: pointer;
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .slider {
+    width: 12em;
+  }
+  .body-card {
+    width: 220px;
+  }
 }
