@@ -12,9 +12,15 @@
 }
  
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {  
+@media (min-width: 1200px) {
     .monster-container {
-        margin-top: 15vh !important;
-        margin-right: auto !important;
+        margin-top: calc(20% - 15rem) !important;
+        margin-left: calc(20% - .8rem);
     }
 }
+
+/* @media (min-resolution: 72dpi) {
+    body {
+        background: aliceblue !important;
+    }
+} */
