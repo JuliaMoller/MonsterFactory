@@ -156,11 +156,13 @@
                         </select>
                     </div>
                     <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="pawsHueRotate" class="slider" oninput="hueFunction('paw', this.value)">
-                    <div class="my-3 mx-4">
-                        <div class="card bg-dark rounded-sm text-center mx-auto py-3">
+                    <div class="my-3 mx-lg-4">
+                        <div class="card body-card bg-dark rounded-sm text-center mx-auto py-3">
                             <!-- body select -->
-                            <label class="text-primary mt-3"><h4>BODY</h4></label> <br/>
-                            <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="bodyHueRotate" class="slider mx-auto px-5" oninput="hueFunction('monster-body', this.value)">
+                            <label class="text-primary mt-3"><h4>BODY</h4></label>
+                            <div>
+                                <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="bodyHueRotate" class="slider" oninput="hueFunction('monster-body', this.value)">
+                            </div>
                         </div>
                     </div>
                 </div>
