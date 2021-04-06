@@ -1,3 +1,8 @@
+
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+   width: 150px;
+}
+
 /* icon size */
 .option-icon {
     width: 50%;
@@ -18,4 +23,35 @@
 /* change background colour of ative and hover - select options */
 .dropdown-item.active, .dropdown-item:hover {
    background-color: #D7ABFF;
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+   .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+      width: 220px;
+   }
+
+
+   /* icon size */
+   .option-icon {
+      width: 50%;
+   }
+
+   /* change colour of whole select options dropdown */
+   .bootstrap-select .dropdown-menu { 
+   background-color: #14141a
+   }
+   /* align select icon to center */
+   .bootstrap-select .dropdown-toggle .filter-option { 
+   text-align: center;
+   }
+   /* align select options icons to center */
+   .bootstrap-select .dropdown-menu li a span.text {
+   text-align: center;
+   }
+   /* change background colour of ative and hover - select options */
+   .dropdown-item.active, .dropdown-item:hover {
+   background-color: #D7ABFF;
+   }
 }
