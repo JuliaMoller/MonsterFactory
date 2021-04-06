@@ -31,16 +31,18 @@
     <body>
 
         <!-- MODAL -->
-            <div class="modal-content bg-gradient-modal">
-                <span class="close text-right">&times;</span>
-                <div class="text-center">
-                    <div class="card monster-card bg-transparent border-0">
-                        
-                    </div>
+        <div class="modal-content bg-gradient-modal">
+            <span class="close text-right">&times;</span>
+            <div class="text-center">
+                <div id="monsterCard" class="card monster-card bg-transparent border-0 m-auto d-block">
+                    <img class="monsterFinalImage" src="monster.png"/>
+                </div>
+                <div class="mt-5">
                     <button class="btn btn-success" type="submit" onclick="saveMonster()">SAVE</button>
                     <button class="btn btn-warning" type="submit" onclick="shareFacebook()">FACEBOOK</button>
                 </div>
             </div>
+        </div>
 
         <!-- Bootstrap core JavaScript -->
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
