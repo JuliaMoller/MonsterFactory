@@ -123,6 +123,7 @@ html {
 .share {
     filter: invert(90%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
     width: 25px;
+    pointer-events: none;
 }
 /* Text */
 .text-primary {
