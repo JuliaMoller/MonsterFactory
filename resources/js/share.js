@@ -21,10 +21,27 @@
 //     }, 200);
 // }
 
+// document.getElementById("twitterShare").addEventListener("click", function(){
+//     var url ="https://twitter.com/share?url=" + encodeURIComponent(document.location);
+//     var monsterName = document.getElementById("monsterName").value;
+//     var text = "Hi, this is my new monster " + monsterName;
+//     window.open(url + "&text=" + text);
+//   })
 
+// var largeImage = document.getElementById('largeImage');
+// largeImage.style.display = 'block';
+// largeImage.style.width=200+"px";
+// largeImage.style.height=200+"px";
+// var url=largeImage.getAttribute('src');
+// window.open(url,'Image','width=largeImage.stylewidth,height=largeImage.style.height,resizable=1');
 
 function shareTwitter (){ 
-    window.open(
-        "https://twitter.com/share?url="+ encodeURIComponent(window.location.href)+"&text="+document.title, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
-        return false; 
+    var url ="https://twitter.com/share?url=" + encodeURIComponent(document.location);
+    var monsterName = document.getElementById("monsterName").innerHTML;
+    var text = "Hi, this is my new monster " + monsterName;
+    window.open(url + "&text=" + text, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
+
+    // window.open(
+    //     "https://twitter.com/share?url="+ encodeURIComponent(window.location.href)+"&text="+document.title, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
+    //     return false; 
     }
