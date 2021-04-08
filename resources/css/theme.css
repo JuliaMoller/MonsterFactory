@@ -33,19 +33,15 @@ html {
     color: #1D1D24 !important;
     border: 0;
 }
+
 .btn-success {
-    background-color: #169E8A !important;
+    background-color: #5E17A6 !important;
     color: #1D1D24 !important;
-    transition: 1s ease-out;
     border: 0;
 }
 
-.btn-success:hover {
-    background: linear-gradient(to right, #11a752, #00a881, 
-                #00a8a8, #00a2c7, #728df8, 
-                #ba79ec, #ed6ec3, #ff6685) !important;
-    color: #8747E2 !important;
-    border: 0;
+.btn-success:hover .btn-success:focus {
+    background-color: #8747E2 !important;
 }
 
 .btn-warning {
@@ -76,6 +72,58 @@ html {
     transition: 1s;
 }
 
+/* done btn */
+.btn-done {
+    background-color: #169E8A !important;
+    color: #1D1D24 !important;
+    transition: 1s ease-out;
+    border: 0;
+}
+
+.btn-done:hover {
+    background: linear-gradient(to right, #11a752, #00a881, 
+                #00a8a8, #00a2c7, #728df8, 
+                #ba79ec, #ed6ec3, #ff6685) !important;
+    color: #8747E2 !important;
+    border: 0;
+}
+
+/* Social media btns */
+.btn-facebook {
+    background-color:#4267B2;
+    color: #EAE6E6;
+    box-shadow: 3px 5px 2px rgba(0, 0, 0, 0.322);
+}
+
+.btn-twitter {
+    background-color:#1DA1F2;
+    color: #EAE6E6;
+    box-shadow: 3px 5px 2px rgba(0, 0, 0, 0.322);
+}
+
+.btn-whats {
+    background-color:#34B7F1;
+    color: #EAE6E6;
+    box-shadow: 3px 5px 2px rgba(0, 0, 0, 0.322);
+}
+
+.btn-instagram {
+    background-image: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
+    border: none;
+    color: #EAE6E6;
+    box-shadow: 3px 5px 2px rgba(0, 0, 0, 0.322);
+}
+
+.btn-pinterest {
+    background-color:#E60023;
+    color: #EAE6E6;
+    box-shadow: 3px 5px 2px rgba(0, 0, 0, 0.322);
+}
+
+.share {
+    filter: invert(90%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+    width: 25px;
+}
 /* Text */
 .text-primary {
     color: #2ED67A !important;

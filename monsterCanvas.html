@@ -127,7 +127,7 @@
                             <input class="form-control mt-1 ml-4" type="text" id="monsterName" placeholder="What is my name?" oninput="updateName(this.value)">
                         </div>
                         <div class="mt-4">
-                            <button class="btn btn-success btn-block" id="done" type="submit" onclick="printMonster()">DONE</button>
+                            <button class="btn btn-done btn-block" id="done" type="submit" onclick="printMonster()">DONE</button>
                         </div>
                 </div>
                 <div class="col-6 col-md-3 text-center order-lg-3 order-2">
@@ -178,8 +178,12 @@
                         <!-- the final image will appears here -->
                     </div>
                     <div class="mt-5">
-                        <button class="btn btn-success" type="submit" onclick="saveMonster()">SAVE</button>
-                        <button class="btn btn-warning" type="submit" onclick="shareFacebook()">FACEBOOK</button>
+                        <button class="btn btn-success btn-lg font-weight-bold text-warning mr-lg-5" type="submit" onclick="saveMonster()">SAVE</button>
+                        <button class="btn btn-facebook rounded p-2 m-2" type="submit" onclick="shareFacebook()"><object class="share d-block m-auto" data="resources/svg/social media/facebook.svg" type="image/svg+xml"></object></button>
+                        <button class="btn btn-twitter rounded p-2 m-2" type="submit" onclick="shareFacebook()"><object class="share d-block m-auto" data="resources/svg/social media/twitter.svg" type="image/svg+xml"></object></button>
+                        <button class="btn btn-whats rounded p-2 m-2" type="submit" onclick="shareFacebook()"><object class="share d-block m-auto" data="resources/svg/social media/whatsapp.svg" type="image/svg+xml"></object></button>
+                        <button class="btn btn-instagram rounded p-2 m-2" type="submit" onclick="shareFacebook()"><object class="share d-block m-auto" data="resources/svg/social media/instagram.svg" type="image/svg+xml"></object></button>
+                        <button class="btn btn-pinterest rounded p-2 m-2" type="submit" onclick="shareFacebook()"><object class="share d-block m-auto" data="resources/svg/social media/pinterest-circular-logo-symbol.svg" type="image/svg+xml"></object></button>
                     </div>
                 </div>
             </div>
