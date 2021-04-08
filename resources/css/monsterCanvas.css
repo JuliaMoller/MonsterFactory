@@ -71,7 +71,7 @@
     top: 0;
     left: 0;
     z-index: 0;
-    filter: drop-shadow(-3px 3px 5px rgba(70, 70, 70, 0.384))
+    filter: drop-shadow(-3px 3px 5px rgba(70, 70, 70, 0.384));
 }
 
 /* Large devices (desktops, 992px and up) */
