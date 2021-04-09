@@ -41,21 +41,25 @@ var parts = {
 function changeCanvasColor () {
     let color = document.getElementById("colorInputColor").value;
     document.getElementById("monsterCanvas").style.backgroundColor = color;
+    updateSearchParam("canvasColor", color);
 }
 
 // to change monster's body hue rotation
 function hueFunction (className, hueVal) {
     var setAs = hueVal + "deg"
     document.getElementsByClassName(className)[0].setAttribute("style", "-webkit-filter:hue-rotate(" + setAs + ")");
+    updateSearchParam(className + "_hue", hueVal);
   }
 
 // to change monster's body parts
 function changeSvg (className, sectionId) {
     var i = document.getElementById(sectionId).value;
     document.getElementsByClassName(className)[0].setAttribute("src", parts[sectionId][i]);
+    updateSearchParam(className, i);
 }
 
 //to update monster's name
 function updateName(e) {
     document.getElementById("monsterName").innerHTML = e;
+    updateSearchParam("name", e);
 }

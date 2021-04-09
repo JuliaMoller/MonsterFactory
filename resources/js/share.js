@@ -1,44 +1,82 @@
 
-// to share in facebook
+    
+function updateValue (className, sectionId, hueVal){
+    let urlParams = new URLSearchParams(document.location.search);
+        if (!urlParams.has(className)) {
+            updateSearchParam(className, 0);            
+        } else {
+          document.getElementById(sectionId).value = urlParams.get(className);
+          changeSvg(className, sectionId);
+          //hueFunction (className, hueVal);
+        }
+        if (!urlParams.has(className + "_hue")) {
+            updateSearchParam(className + "_hue", hueVal);
+        } else {
+            console.log(hueVal);
+           hueFunction (className,  urlParams.get(className + "_hue"));
+        }
+}
 
-// function shareFacebook (){
-//     var params = "menubar=no,toolbar=no,status=no,width=570,height=570"; // for window
+function updateCanvasColor (){
+    let urlParams = new URLSearchParams(document.location.search);
+    if (!urlParams.has("canvasColor")) {
+        updateSearchParam("canvasColor", 0);            
+    } else {
+        document.getElementById("monsterCanvas").style.backgroundColor = urlParams.get("canvasColor");
+    }
+}
 
-//     setTimeout(() => {
-//         domtoimage.toPng(monsterCanvas)
-//         .then(function (dataUrl) {
+function updateMonsterName (){
+    let urlParams = new URLSearchParams(document.location.search);
+    if (!urlParams.has("name")) {
+        updateSearchParam("name", "");            
+    } else {
+        updateName(urlParams.get("name"));
+    }
+}
 
-//             img.src = dataUrl;
-//             modalImg.appendChild(img);
+function updateMonsterBody (){
+    let urlParams = new URLSearchParams(document.location.search);
+    if (!urlParams.has("monster-body_hue")) {
+        updateSearchParam("monster-body_hue", 0);            
+    } else {
+        hueFunction ("monster-body", urlParams.get("monster-body_hue"));
+    }
+}
 
-//             var i = document.getElementById("monsterCard");
+//update window value to standard values
+window.onload = function() {
+    updateValue ("eye", "eyes");
+    updateValue ("mouth", "mouths");
+    updateValue ("horn", "horns", 0);
+    updateValue ("ear", "ears", 0);
+    updateValue ("hair", "hairs", 0);
+    updateValue ("tail", "tails", 0);
+    updateValue ("paw", "paws", 0);
+    updateMonsterBody ();
+    updateCanvasColor ();
+    updateMonsterName ();
+};
 
-//             console.log (encodeURIComponent(dataUrl));
-//             let shareUrl = "http://www.facebook.com/sharer/sharer.php?u=" + img;
-//             window.open(shareUrl,"NewWindow" , params);  
+//updates the search params URL
+function updateSearchParam(param, value) {
+    let urlParams = new URLSearchParams(document.location.search);
+    urlParams.set(param, value);
+    history.pushState({}, window.title, "?" + urlParams);
+}
 
-//         });
-//     }, 200);
-// }
+function shareFacebook() {
+    console.log(document.location.href);
+    let url = "https://www.facebook.com/sharer/sharer.php?u=" + document.location.href;
+    console.log(url);
+    window.open(url, "");
+}
 
-// document.getElementById("twitterShare").addEventListener("click", function(){
-//     var url ="https://twitter.com/share?url=" + encodeURIComponent(document.location);
-//     var monsterName = document.getElementById("monsterName").value;
-//     var text = "Hi, this is my new monster " + monsterName;
-//     window.open(url + "&text=" + text);
-//   })
-
-// var largeImage = document.getElementById('largeImage');
-// largeImage.style.display = 'block';
-// largeImage.style.width=200+"px";
-// largeImage.style.height=200+"px";
-// var url=largeImage.getAttribute('src');
-// window.open(url,'Image','width=largeImage.stylewidth,height=largeImage.style.height,resizable=1');
-
+    
 function shareTwitter (){ 
     var url ="https://twitter.com/share?url=" + encodeURIComponent(document.location);
     var monsterName = document.getElementById("monsterName").innerHTML;
-    var text = "Hi, this is my new monster " + monsterName;
+    var text = "Hi, this is my new monster " + monsterName + " " + window.location.href;
     window.open(url + "&text=" + text, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
 
     // window.open(
