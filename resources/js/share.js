@@ -1,5 +1,4 @@
-
-    
+//get and update url params of body parts and their hue values
 function updateValue (className, sectionId, hueVal){
     let urlParams = new URLSearchParams(document.location.search);
         if (!urlParams.has(className)) {
@@ -17,6 +16,17 @@ function updateValue (className, sectionId, hueVal){
         }
 }
 
+//get and update url params of body hue values
+function updateMonsterBody (){
+    let urlParams = new URLSearchParams(document.location.search);
+    if (!urlParams.has("monster-body_hue")) {
+        updateSearchParam("monster-body_hue", 0);            
+    } else {
+        hueFunction ("monster-body", urlParams.get("monster-body_hue"));
+    }
+}
+
+//get and update url params of canvas colour
 function updateCanvasColor (){
     let urlParams = new URLSearchParams(document.location.search);
     if (!urlParams.has("canvasColor")) {
@@ -26,21 +36,13 @@ function updateCanvasColor (){
     }
 }
 
+//get and update url params of monster's name
 function updateMonsterName (){
     let urlParams = new URLSearchParams(document.location.search);
     if (!urlParams.has("name")) {
         updateSearchParam("name", "");            
     } else {
         updateName(urlParams.get("name"));
-    }
-}
-
-function updateMonsterBody (){
-    let urlParams = new URLSearchParams(document.location.search);
-    if (!urlParams.has("monster-body_hue")) {
-        updateSearchParam("monster-body_hue", 0);            
-    } else {
-        hueFunction ("monster-body", urlParams.get("monster-body_hue"));
     }
 }
 
@@ -65,6 +67,7 @@ function updateSearchParam(param, value) {
     history.pushState({}, window.title, "?" + urlParams);
 }
 
+// share to facebook
 function shareFacebook() {
     console.log(document.location.href);
     let url = "https://www.facebook.com/sharer/sharer.php?u=" + document.location.href;
@@ -72,14 +75,11 @@ function shareFacebook() {
     window.open(url, "");
 }
 
-    
+// share to twitter
 function shareTwitter (){ 
     var url ="https://twitter.com/share?url=" + encodeURIComponent(document.location);
     var monsterName = document.getElementById("monsterName").innerHTML;
-    var text = "Hi, this is my new monster " + monsterName + " " + window.location.href;
+    var text = "Hi, this is my new monster " + monsterName;
     window.open(url + "&text=" + text, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
 
-    // window.open(
-    //     "https://twitter.com/share?url="+ encodeURIComponent(window.location.href)+"&text="+document.title, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
-    //     return false; 
-    }
+}
