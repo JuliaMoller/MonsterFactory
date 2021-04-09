@@ -79,7 +79,7 @@ function shareFacebook() {
 function shareTwitter (){ 
     var url ="https://twitter.com/share?url=" + encodeURIComponent(document.location);
     var monsterName = document.getElementById("monsterName").innerHTML;
-    var text = "Hi, this is my new monster " + monsterName;
+    var text = "Hi, this is my new monster " + monsterName + " #monsterFactory";
     window.open(url + "&text=" + text, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
 
 }
