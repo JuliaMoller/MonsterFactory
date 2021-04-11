@@ -25,8 +25,8 @@
 
 #mySidenav a:hover {
     left: -10PX;
-    background: linear-gradient(to right, #a746c5, #5171ca, #1daf99)!important;
-    background: -webkit-linear-gradient(to right, #a746c5, #5171ca, #1daf99)!important;
+    background: linear-gradient(to right, #8f36aa, #2B458C, #1daf99)!important;
+    background: -webkit-linear-gradient(to right, #8f36aa, #2B458C, #1daf99)!important;
     transition: 0.5s;
 }
 
