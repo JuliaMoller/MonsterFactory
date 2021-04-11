@@ -44,7 +44,7 @@ html {
 }
 
 .btn-warning {
-    background-color: #FA650A !important;
+    background-color: #ff7300 !important;
     color: #1D1D24 !important;
     border: 0;
 }
@@ -182,5 +182,5 @@ html {
 .border-warning {
     border-width: 3px !important;
     border-radius: 0 !important;
-    border-color: #FA650A !important;
+    border-color: #ff7300 !important;
 }
