@@ -78,7 +78,17 @@
         <!-- monster factory -->
         <div class="container monster-container my-5">
             <div class="row d-flex">
-                <div class="col-6 col-md-3 text-center order-1">
+                <!-- Title -->
+                <div class="col-12 row m-auto">
+                    <img class="col-lg-4 col-9 pe-none" src="resources/img/lettering/MonsterFactory.png"/>
+                    <div class="col-lg-5 col-12 rounded my-auto text-light shadow bg-success">
+                        <h5 class="py-2">
+                            Welcome to the Monster Factory! <br/>
+                            Use the controls bellow to create your own personal Monster.
+                        </h5>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 text-center order-2">
                     <!-- eyes select -->
                     <div class="my-3">
                         <select class="selectpicker" id="eyes" data-style="btn-dark" onchange="changeSvg('eye', this.id)">
@@ -115,7 +125,7 @@
                     </div>
                     <input type="range" data-default="0" min="0" max="360" value="0" step="1" id="hairssHueRotate" class="slider" oninput="hueFunction('hair', this.value)">
                 </div>
-                <div class="col-12 col-md-5 order-lg-2 order-3">
+                <div class="col-12 col-md-5 order-lg-2 order-1">
                         <div class="d-flex justify-content-center mt-4">
                             <!-- Monster Canvas -->
                             <div id="monsterCanvas" class="parent">
@@ -141,7 +151,7 @@
                             <button class="btn btn-done btn-block font-weight-bold" id="done" type="submit" onclick="printMonster()">DONE</button>
                         </div>
                 </div>
-                <div class="col-6 col-md-3 text-center order-lg-3 order-2">
+                <div class="col-6 col-md-3 text-center order-lg-3 order-3">
                     <!-- mouths select -->
                     <div class="my-3">
                         <select class="selectpicker" id="mouths" data-style="btn-dark" onchange="changeSvg('mouth', this.id)">
